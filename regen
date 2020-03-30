@@ -1,0 +1,11 @@
+#!/bin/bash
+
+REGEN_HOME=$(realpath $0)
+REGEN_HOME=$(dirname $REGEN_HOME)
+
+if [ -f Makefile ];
+then
+  make
+fi
+
+$REGEN_HOME/regen.py *.pg
